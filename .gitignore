@@ -1,1 +1,5 @@
 .DS_Store
+
+# clean up the structure for github repo
+playground.xcworkspace/
+xcuserdata/
