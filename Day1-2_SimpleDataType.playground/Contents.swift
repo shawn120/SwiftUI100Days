@@ -78,7 +78,7 @@ print(message)
 // put calculations inside string interpolation
 print("5 x 5 is \(5 * 5)")
 
-// check point
+// check point 1
 let cel = 30.5
 let fe = cel * 9 / 5 + 32
 print("\(cel) °C is equal to \(fe) °F")
