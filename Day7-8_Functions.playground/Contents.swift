@@ -183,12 +183,12 @@ func mySqrt(of target: Int) throws -> Int {
     }
     throw mySqrtError.noRoot
 }
-let target = 0
+let target = 2
 do {
     let answer = try mySqrt(of: target)
     print("the square root of \(target) is \(answer)")
 } catch mySqrtError.outOfBounds {
-    print("the target is out of bounds")
+    print("\(target) is out of bounds")
 } catch mySqrtError.noRoot {
-    print("the target has no integer root")
+    print("\(target) has no integer root")
 }
