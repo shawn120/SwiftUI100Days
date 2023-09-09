@@ -12,3 +12,5 @@ Day4: [Type Annotations](/Day4_TypeAnnotations.playground/Contents.swift)
 Day5: [Conditions](/Day5_Conditions.playground/Contents.swift)
 
 Day6: [Loops](/Day6_Loops.playground/Contents.swift)
+
+Day7: [Functions](/Day7_Functions.playground/Contents.swift)
