@@ -14,3 +14,5 @@ Day5: [Conditions](/Day5_Conditions.playground/Contents.swift)
 Day6: [Loops (Checkpoint 3)](/Day6_Loops.playground/Contents.swift)
 
 Day7-8: [Functions (Checkpoint 4)](/Day7-8_Functions.playground/Contents.swift)
+
+Day9: [Closures (Checkpoint 5)](/Day9_Closures.playground/Contents.swift)
