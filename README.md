@@ -3,7 +3,7 @@ Personal Notes for [100 Days of SwiftUI](https://www.hackingwithswift.com/100/sw
 
 ## Directly to the swift files:
 
-Contain my solutions for each checkpoint. All the answer can get the correct output asked by the checkpoint, but not garantee to be the best solution.
+Including my solutions for each checkpoint. All the answer can get the correct output asked by the checkpoint, but not garantee to be the best solution.
 
 Day1-2: [Simple Data Type (Checkpoint 1)](/Day1-2_SimpleDataType.playground/Contents.swift)
 
