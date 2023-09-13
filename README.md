@@ -19,4 +19,4 @@ Day7-8: [Functions (Checkpoint 4)](/Day7-8_Functions.playground/Contents.swift)
 
 Day9: [Closures (Checkpoint 5)](/Day9_Closures.playground/Contents.swift)
 
-Day10: [Structs](/Day10_Structs.playground/Contents.swift)
+Day10-11: [Structs](/Day10-11_Structs.playground/Contents.swift)
