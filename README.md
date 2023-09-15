@@ -22,3 +22,5 @@ Day9: [Closures (Checkpoint 5)](/Day9_Closures.playground/Contents.swift)
 Day10-11: [Structs (Checkpoint 6)](/Day10-11_Structs.playground/Contents.swift)
 
 Day12: [Classes (Checkpoint 7)](/Day12_Classes.playground/Contents.swift)
+
+Day13: [Protocols and Extensions (Checkpoint 8)](/Day13_ProtocolsAndExtensions.playground/Contents.swift)
