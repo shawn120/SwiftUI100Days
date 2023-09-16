@@ -1,9 +1,11 @@
 # SwiftUI100Days
 Personal Notes for [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui)
 
-## Directly to the swift files:
+## Notes Content
 
-Including my solutions for each checkpoint. For some solutions I will add in some my own idea, but the main idea stay the same with the requirement and will still be able to demonstrate the same concept.
+Code notes includ my solutions for each checkpoint. For some solutions I will add in some my own idea, but the main idea stay the same with the requirement and will still be able to demonstrate the same concept.
+
+### Introduction to Swift (Days 1-14)
 
 Day1-2: [Simple Data Type (Checkpoint 1)](/Day1-2_SimpleDataType.playground/Contents.swift)
 
@@ -24,3 +26,9 @@ Day10-11: [Structs (Checkpoint 6)](/Day10-11_Structs.playground/Contents.swift)
 Day12: [Classes (Checkpoint 7)](/Day12_Classes.playground/Contents.swift)
 
 Day13: [Protocols and Extensions (Checkpoint 8)](/Day13_ProtocolsAndExtensions.playground/Contents.swift)
+
+Day14: [Optionals (Checkpoint 9)](/Day14_Optionals.playground/Contents.swift)
+
+### Consolidation I (Day 15)
+
+Day15:
