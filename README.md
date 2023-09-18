@@ -31,4 +31,4 @@ Day14: [Optionals (Checkpoint 9)](/Day14_Optionals.playground/Contents.swift)
 
 ### Consolidation I (Day 15)
 
-Day15:
+Day15: [Swift Rivew (Article)](https://www.hackingwithswift.com/100/swiftui/15)
