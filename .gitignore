@@ -1,5 +1,31 @@
 .DS_Store
 
-# clean up the structure for github repo
-playground.xcworkspace/
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+## User settings
 xcuserdata/
+
+## Obj-C/Swift specific
+*.hmap
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+.build/
+Carthage/Build/
+
+# Accio dependency management
+Dependencies/
+.accio/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+iOSInjectionProject/

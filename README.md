@@ -32,3 +32,11 @@ Day14: [Optionals (Checkpoint 9)](/Day14_Optionals.playground/Contents.swift)
 ### Consolidation I (Day 15)
 
 Day15: [Swift Rivew (Article)](https://www.hackingwithswift.com/articles/242/learn-essential-swift-in-one-hour)
+
+### Starting SwiftUI (Days 16-24)
+
+Project 1: [WeSplit](/WeSplit/WeSplit/)
+- [x] Day16: Part 1
+- [ ] Day17: Part 2
+- [ ] Day18: Part 3
+- [ ] Day19: Challenge Day
