@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  WeSplit
 //
-//  Created by Shawn on 9/18/23.
+//  Created by Shawn on 9/19/23.
 //
 
 import SwiftUI
@@ -14,8 +14,6 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview { // new feature in Xcode15
+    ContentView()
 }
