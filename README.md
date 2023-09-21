@@ -41,4 +41,7 @@ Project 1: [WeSplit](/WeSplit/WeSplit/ContentView.swift)
 - [x] Day18: Part 3 (Challenge)
 - [x] Day19: Challenge Day: [WeConvert](/WeConvert/WeConvert/ContentView.swift)
 
-Project 2:
+Project 2: [GuessTheFlag](/GuessTheFlag/GuessTheFlag/ContentView.swift)
+- [x] Day20: Part 1
+- [ ] Day21: Part 2
+- [ ] Day22: Part 3
