@@ -35,8 +35,10 @@ Day15: [Swift Rivew (Article)](https://www.hackingwithswift.com/articles/242/lea
 
 ### Starting SwiftUI (Days 16-24)
 
-Project 1: [WeSplit (Direct link to ContentView)](/WeSplit/WeSplit/ContentView.swift)
+Project 1: [WeSplit](/WeSplit/WeSplit/ContentView.swift)
 - [x] Day16: Part 1
 - [x] Day17: Part 2
 - [x] Day18: Part 3 (Challenge)
-- [ ] Day19: Challenge Day
+- [x] Day19: Challenge Day: [WeConvert](/WeConvert/WeConvert/ContentView.swift)
+
+Project 2:
