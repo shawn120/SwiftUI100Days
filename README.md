@@ -45,3 +45,8 @@ Project 2: [GuessTheFlag](/GuessTheFlag/GuessTheFlag/ContentView.swift)
 - [x] Day20: Part 1
 - [x] Day21: Part 2
 - [x] Day22: Part 3 (Challenge)
+- [x] Customized Challenge
+  - [x] Added a `Total Rounds` picker, will disable when game start
+  - [x] Added a `Start Over` button to reset game manually
+  - [x] Added a customized `nextCorrectAnswer` function to prevent same flag to be selected again in a row
+  - [x] Added more flags

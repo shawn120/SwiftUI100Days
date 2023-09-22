@@ -9,22 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US", "China"].shuffled()
+    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US", "China", "Taiwan", "Laos", "Philippines", "Japan", "Canada", "Malaysia", "Indonesia", "Vietnam", "Singapore", "USSR", "Korea", "North Korea"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
     
-    @State private var roundMax = 3
-    let roundRange = 3...8
+    @State private var roundMax = 5
+    let roundRange = 3...10
     
     // alert switch
     @State private var showingScore = false
     @State private var finalGame = false
     
+    // round picker switch
     @State private var disablePicker = false
     
+    // score alert
     @State private var scoreTitle = ""
     @State private var score = 0
     @State private var scoreMessage = ""
-    
+    // final result alert
     @State private var round = 0
     @State private var resultTitle = ""
     @State private var resultMessage = ""
@@ -144,8 +146,9 @@ struct ContentView: View {
     }
     
     func askQuestion() {
+        let previousCountry = countries[correctAnswer]
         countries.shuffle()
-        correctAnswer = Int.random(in: 0...2)
+        correctAnswer = nextCorrectAnswer(previousCountry: previousCountry, in: 0...2)
     }
     
     func gameReset() {
@@ -153,6 +156,14 @@ struct ContentView: View {
         round = 0
         score = 0
         disablePicker = false
+    }
+    
+    func nextCorrectAnswer(previousCountry: String, in select_range: ClosedRange<Int>) -> Int {
+        var random = Int.random(in: select_range)
+        while countries[random] == previousCountry {
+            random = Int.random(in: select_range)
+        }
+        return random
     }
 }
 
