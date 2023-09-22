@@ -43,5 +43,5 @@ Project 1: [WeSplit](/WeSplit/WeSplit/ContentView.swift)
 
 Project 2: [GuessTheFlag](/GuessTheFlag/GuessTheFlag/ContentView.swift)
 - [x] Day20: Part 1
-- [ ] Day21: Part 2
+- [x] Day21: Part 2
 - [ ] Day22: Part 3
