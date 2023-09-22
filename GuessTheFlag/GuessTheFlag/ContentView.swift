@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US", "China", "Taiwan", "Laos", "Philippines", "Japan", "Canada", "Malaysia", "Indonesia", "Vietnam", "Singapore", "USSR", "Korea", "North Korea"].shuffled()
+    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US", "China", "Taiwan", "Laos", "Philippines", "Japan", "Canada", "Malaysia", "Indonesia", "Vietnam", "Singapore", "USSR", "Korea", "North Korea", "Hong Kong"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
     
     @State private var roundMax = 5
