@@ -50,3 +50,7 @@ Project 2: [GuessTheFlag](/GuessTheFlag/GuessTheFlag/ContentView.swift)
   - [x] Added a `Start Over` button to reset game manually
   - [x] Added a customized `nextCorrectAnswer` function to prevent same flag to be selected again in a row
   - [x] Added more flags
+
+Project 3: [ViewsAndModifiers (Technique)](/ViewsAndModifiers/ViewsAndModifiers/ContentView.swift)
+- [x] Day23: Part 1
+- [ ] Day24: Part 2 (Challenge to project 1 & 2)
