@@ -9,11 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
+    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US", "China"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
     
+    @State private var roundMax = 3
+    let roundRange = 3...8
+    
+    // alert switch
     @State private var showingScore = false
+    @State private var finalGame = false
+    
+    @State private var disablePicker = false
+    
     @State private var scoreTitle = ""
+    @State private var score = 0
+    @State private var scoreMessage = ""
+    
+    @State private var round = 0
+    @State private var resultTitle = ""
+    @State private var resultMessage = ""
     
     var body: some View {
         ZStack {
@@ -24,11 +38,27 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack {
-                Spacer()
                 Text("Guess the Flag")
                     .font(.largeTitle.bold()) // a shortcut for ".largeTitle.weight(.bold)"
                     .foregroundStyle(.white)
+                HStack{
+                    Text(disablePicker ? "Total Rounds: " : "Select Total Rounds:")
+                        .font(.title3.bold())
+                        .foregroundStyle(disablePicker ? .gray : .white)
+                    Picker("Pick Round", selection: $roundMax) {
+                        ForEach(roundRange, id:\.self){
+                            Text($0, format: .number)
+                        }
+                    }
+                    .background(.thinMaterial)
+                    .clipShape(Capsule())
+                    .disabled(disablePicker)
+                }
+                
                 Spacer()
+                Text("Round: \(round)")
+                    .font(.title2.bold())
+                    .foregroundStyle(.white)
                 Spacer()
                 VStack (spacing: 15) {
                     VStack {
@@ -45,7 +75,7 @@ struct ContentView: View {
                             Image(countries[number])
                                 .renderingMode(.original)
                                 .clipShape(Capsule())
-                                .shadow(radius: 5)
+                                .shadow(radius: 8)
                         }
                         
                     }
@@ -54,39 +84,75 @@ struct ContentView: View {
                 .padding(.vertical, 20)
                 .background(.thinMaterial)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
+                .shadow(radius: 10)
                 
                 Spacer()
 //                Spacer()
                 
-                Text("Score: ???")
+                Text("Score: \(score)")
                     .foregroundColor(.white)
                     .font(.title.bold())
                     .padding(.vertical)
-                
+                Button("Start Over", role: .cancel, action: gameReset)
+                    .buttonStyle(.borderedProminent)
                 Spacer()
             }
             .padding()
         }
         .alert(scoreTitle, isPresented: $showingScore) {
-            Button("Continue", action: askQuestion)
+            Button("Continue") {
+                if round == roundMax {
+                    finalRound()
+                } else {
+                    askQuestion()
+                }
+            }
         } message: {
-            Text("Your score is ???")
+            Text(scoreMessage)
+        }
+        .alert(resultTitle, isPresented: $finalGame){
+            Button("Start a new game", action: gameReset)
+        } message: {
+            Text(resultMessage)
         }
     }
     
     func flagTapped(_ number: Int) {
+        disablePicker = true
         if number == correctAnswer {
-            scoreTitle = "Correct"
+            scoreTitle = "Correct!"
+            score += 1
+            scoreMessage = "Your score is \(score)"
         } else {
-            scoreTitle = "Wrong"
+            scoreTitle = "Wrong!"
+            scoreMessage = "You clicked the flag of \(countries[number])"
         }
-        
         showingScore = true
+        round += 1
+    }
+    
+    func finalRound() {
+        let passRound = roundMax / 2 + 1
+        if score >= passRound{
+            resultTitle = "Congratulation! You win!"
+            resultMessage = "You final score is \(score)"
+        } else {
+            resultTitle = "Game Over"
+            resultMessage = "You final score is \(score)"
+        }
+        finalGame = true
     }
     
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+    }
+    
+    func gameReset() {
+        askQuestion()
+        round = 0
+        score = 0
+        disablePicker = false
     }
 }
 
