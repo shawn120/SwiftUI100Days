@@ -7,6 +7,44 @@
 
 import SwiftUI
 
+extension View {
+    func FlagImage(_ countryName: String) -> some View {
+        Image(countryName)
+            .renderingMode(.original)
+            .clipShape(Capsule())
+            .shadow(radius: 8)
+    }
+}
+
+struct FlagImageView: View {
+    var countryName: String
+    
+    var body: some View {
+        Image(countryName)
+            .renderingMode(.original)
+            .clipShape(Capsule())
+            .shadow(radius: 8)
+    }
+    
+    init(_ countryName: String) {
+        self.countryName = countryName
+    }
+}
+
+struct prominentTitleModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle.bold()) // a shortcut for ".largeTitle.weight(.bold)"
+            .foregroundStyle(.white)
+    }
+}
+
+extension View {
+    func prominentTitle() -> some View {
+        modifier(prominentTitleModifier())
+    }
+}
+
 struct ContentView: View {
     
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US", "China", "Taiwan", "Laos", "Philippines", "Japan", "Canada", "Malaysia", "Indonesia", "Vietnam", "Singapore", "USSR", "Korea", "North Korea", "Hong Kong"].shuffled()
@@ -41,8 +79,7 @@ struct ContentView: View {
             
             VStack {
                 Text("Guess the Flag")
-                    .font(.largeTitle.bold()) // a shortcut for ".largeTitle.weight(.bold)"
-                    .foregroundStyle(.white)
+                    .prominentTitle()
                 HStack{
                     Text(disablePicker ? "Total Rounds: " : "Select Total Rounds:")
                         .font(.title3.bold())
@@ -74,10 +111,8 @@ struct ContentView: View {
                         Button{
                             flagTapped(number)
                         } label: {
-                            Image(countries[number])
-                                .renderingMode(.original)
-                                .clipShape(Capsule())
-                                .shadow(radius: 8)
+                            FlagImage(countries[number])
+//                            FlagImageView(countries[number])
                         }
                         
                     }

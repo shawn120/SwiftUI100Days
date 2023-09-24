@@ -53,4 +53,8 @@ Project 2: [GuessTheFlag](/GuessTheFlag/GuessTheFlag/ContentView.swift)
 
 Project 3: [ViewsAndModifiers (Technique)](/ViewsAndModifiers/ViewsAndModifiers/ContentView.swift)
 - [x] Day23: Part 1
-- [ ] Day24: Part 2 (Challenge to project 1 & 2)
+- [x] Day24: Part 2 (Challenge to project 1 & 2)
+
+### Consolidation II (Day 25)
+
+Day25:

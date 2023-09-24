@@ -75,6 +75,7 @@ struct ContentView: View {
                 // total bill section (challenge)
                 Section{
                     Text(totalBill, format: currencyFormatter)
+                        .foregroundStyle(tipPercentage == 0 ? .red : .primary)
                 } header: {
                     Text("Total Bill").textCase(.none)
                 }
