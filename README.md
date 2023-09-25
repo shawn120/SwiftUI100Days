@@ -60,4 +60,8 @@ Project 3: [ViewsAndModifiers (Technique)](/ViewsAndModifiers/ViewsAndModifiers/
 
 Day25: Milestone:
 - [x] Reading: [Custom bindings](https://www.hackingwithswift.com/guide/ios-swiftui/2/2/key-points) (Code example in [Project 3](/ViewsAndModifiers/ViewsAndModifiers/ContentView.swift))
-- [ ] Challenge: RPSTeaser
+- [x] Challenge: [RPSTeaser](/RPSTeaser/RPSTeaser/ContentView.swift)
+- [x] Customized Challenge
+  - [x] Added a `Total Rounds` picker, will disable when game start
+  - [x] Added a `Restart` button to reset game manually
+  - [x] Added a `Random Mode` toggle, toggle game mode between alternating promots and randomize promots, will disable when game start
