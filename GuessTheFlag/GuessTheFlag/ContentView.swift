@@ -7,30 +7,6 @@
 
 import SwiftUI
 
-extension View {
-    func FlagImage(_ countryName: String) -> some View {
-        Image(countryName)
-            .renderingMode(.original)
-            .clipShape(Capsule())
-            .shadow(radius: 8)
-    }
-}
-
-struct FlagImageView: View {
-    var countryName: String
-    
-    var body: some View {
-        Image(countryName)
-            .renderingMode(.original)
-            .clipShape(Capsule())
-            .shadow(radius: 8)
-    }
-    
-    init(_ countryName: String) {
-        self.countryName = countryName
-    }
-}
-
 struct prominentTitleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -69,6 +45,21 @@ struct ContentView: View {
     @State private var resultTitle = ""
     @State private var resultMessage = ""
     
+    struct FlagImageView: View {
+        var countryName: String
+        
+        var body: some View {
+            Image(countryName)
+                .renderingMode(.original)
+                .clipShape(Capsule())
+                .shadow(radius: 8)
+        }
+        
+        init(_ countryName: String) {
+            self.countryName = countryName
+        }
+    }
+        
     var body: some View {
         ZStack {
             RadialGradient(stops: [
@@ -111,8 +102,7 @@ struct ContentView: View {
                         Button{
                             flagTapped(number)
                         } label: {
-                            FlagImage(countries[number])
-//                            FlagImageView(countries[number])
+                            FlagImageView(countries[number])
                         }
                         
                     }
