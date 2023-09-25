@@ -69,6 +69,7 @@ struct GridStack<Content: View>: View {
 }
 
 struct ContentView: View {
+    // View composition (view wrap up)
     struct CapsuleText: View {
         var text: String
 
@@ -78,13 +79,40 @@ struct ContentView: View {
             Text("Test")
         }
     }
+    
+    // custom binding-create variables
+    @State private var agreedToTerms = false
+    @State private var agreedToPrivacyPolicy = false
+    @State private var agreedToEmails = false
+    
     var body: some View {
+        // use view wrap up and custom modifiers
         VStack(spacing: 10) {
             CapsuleText(text: "First")
         }
         Color.blue
             .frame(width: 300, height: 200)
             .watermarked(with: "Shawn")
+        
+        // custom binding-apply
+        let agreedToAll = Binding<Bool>(
+            get: {
+                agreedToTerms && agreedToPrivacyPolicy && agreedToEmails
+            },
+            set: {
+                agreedToTerms = $0
+                agreedToPrivacyPolicy = $0
+                agreedToEmails = $0
+            }
+        )
+        VStack() {
+            Toggle("Agree to terms", isOn: $agreedToTerms)
+            Toggle("Agree to privacy policy", isOn: $agreedToPrivacyPolicy)
+            Toggle("Agree to receive shipping emails", isOn: $agreedToEmails)
+            Toggle("Agree to all", isOn: agreedToAll)
+        }
+        
+        // use custom container
         GridStack(rows: 4, columns: 4) { row, col in
             Image(systemName: "\(row * 4 + col).circle")
             Text("R\(row) C\(col)")
