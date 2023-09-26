@@ -65,3 +65,10 @@ Day25: Milestone:
   - [x] Added a `Total Rounds` picker, will disable when game start
   - [x] Added a `Restart` button to reset game manually
   - [x] Added a `Random Mode` toggle, toggle game mode between alternating promots and randomize promots, will disable when game start
+
+### Expanding your skills (Days 26-34)
+
+Project 4: [BetterRest](/BetterRest/BetterRest/ContentView.swift)
+- [x] Day26: Part 1: Extra Watching: [Create ML for Everyone](https://youtu.be/a905KIBw1hs)
+- [ ] Day27: Part 2
+- [ ] Day28: Part 3
