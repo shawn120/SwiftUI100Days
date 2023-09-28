@@ -71,4 +71,4 @@ Day25: Milestone:
 Project 4: [BetterRest](/BetterRest/BetterRest/ContentView.swift)
 - [x] Day26: Part 1: Extra Watching: [Create ML for Everyone](https://youtu.be/a905KIBw1hs)
 - [x] Day27: Part 2
-- [ ] Day28: Part 3
+- [x] Day28: Part 3 (Challenge) (using `onChange` and `onAppear`)
