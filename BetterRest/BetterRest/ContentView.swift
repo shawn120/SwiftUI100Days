@@ -13,9 +13,9 @@ struct ContentView: View {
     @State private var sleepAmount = 8.0
     @State private var coffeeAmount = 1
     
-    @State private var alertTitle = ""
-    @State private var alertMessage = ""
-    @State private var showingAlert = false
+//    @State private var alertTitle = ""
+//    @State private var alertMessage = ""
+//    @State private var showingAlert = false
     
     static var defaultWakeTime: Date {
         var components = DateComponents()
@@ -24,7 +24,7 @@ struct ContentView: View {
         return Calendar.current.date(from: components) ?? Date.now
     }
         
-    @State private var ideaTime = "Error"
+//    @State private var ideaTime = "Error"
     
     var body: some View {
         NavigationStack {
@@ -36,7 +36,7 @@ struct ContentView: View {
                 {
                     DatePicker("Please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
                         .labelsHidden()
-                        .onChange(of: wakeUp, calculateBedtime)
+//                        .onChange(of: wakeUp, calculateBedtime)
                 }
                 
                 // 2. OR use VStack with Text view as title
@@ -45,7 +45,7 @@ struct ContentView: View {
                         Text("Desired amount of sleep")
                             .font(.headline)
                         Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
-                            .onChange(of: sleepAmount, calculateBedtime)
+//                            .onChange(of: sleepAmount, calculateBedtime)
                     }
                 }
                 
@@ -54,7 +54,7 @@ struct ContentView: View {
                         Text("Daily coffee intake")
                             .font(.headline)
                         Stepper(coffeeAmount <= 1 ? "\(coffeeAmount) cup" : "\(coffeeAmount) cups", value: $coffeeAmount, in: 0...20)
-                            .onChange(of: coffeeAmount, calculateBedtime)
+//                            .onChange(of: coffeeAmount, calculateBedtime)
                     }
                 }
                 
@@ -69,14 +69,14 @@ struct ContentView: View {
                                 Text($0 <= 1 ? "\($0) cup" : "\($0) cups")
                             }
                         }
-                        .onChange(of: coffeeAmount, calculateBedtime)
+//                        .onChange(of: coffeeAmount, calculateBedtime)
                     }
                 }
                 VStack {
                     Text("Your idea bed time is ...")
                     HStack{
                         Spacer()
-                        Text(ideaTime)
+                        Text(calculateBedtime())
                             .font(.largeTitle.bold())
                         Spacer()
                     }
@@ -84,9 +84,9 @@ struct ContentView: View {
                 .padding()
             }
             .navigationTitle("BetterRest")
-            .onAppear {
-                calculateBedtime()
-            }
+//            .onAppear {
+//                calculateBedtime()
+//            }
 //                        .toolbar {
 //                            Button("Calculate", action: calculateBedtime)
 //                        }
@@ -98,7 +98,8 @@ struct ContentView: View {
         }
         
     }
-    func calculateBedtime() {
+    func calculateBedtime() -> String{
+        let result: String
         do {
             let config = MLModelConfiguration()
             let model = try SleepCalculator(configuration: config)
@@ -109,15 +110,16 @@ struct ContentView: View {
             
             let prediction = try model.prediction(wake: Double(hour+minute), estimatedSleep: sleepAmount, coffee: Double(coffeeAmount))
             let sleepTime = wakeUp - prediction.actualSleep
-            alertTitle = "Your ideal bedtime is…"
-            alertMessage = sleepTime.formatted(date: .omitted, time: .shortened)
+//            alertTitle = "Your ideal bedtime is…"
+            result = sleepTime.formatted(date: .omitted, time: .shortened)
             
         } catch {
-            alertTitle = "Error"
-            alertMessage = "Error"
+//            alertTitle = "Error"
+            result = "Error"
         }
-        showingAlert = true
-        ideaTime = alertMessage
+        return result
+//        showingAlert = true
+//        ideaTime = alertMessage
     }
     
 }
