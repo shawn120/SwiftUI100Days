@@ -8,26 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var propertyB: Int = 0
-
-    func calculatePropertyA() -> String {
+    @State private var property: Int = 0
+    @State private var propertyB: String = "Error"
+    @State private var switchTest: Bool = false
+    
+    func calculateProperty() -> String {
         let date = Date.now
-//        return String(propertyB * 2)
-        return date.formatted(date: .omitted, time: .shortened)+String(propertyB * 2)
+        if property <= 2{
+            return date.formatted(date: .omitted, time: .shortened)+String(property * 2)
+        }
+        else {
+            return date.formatted(date: .omitted, time: .shortened)+String(property * 4)
+        }
     }
-
+    
+    func calculatePropertyWillFail() -> String {
+        let date = Date.now
+        if property <= 2{
+            propertyB = date.formatted(date: .omitted, time: .shortened)+String(property * 2)
+        }
+        else {
+            propertyB = date.formatted(date: .omitted, time: .shortened)+String(property * 4)
+        }
+        return propertyB
+    }
+    
     var body: some View {
         VStack {
-            Picker("Select Property B", selection: $propertyB) {
-                ForEach(0 ..< 10) {
+            Picker("Select Property", selection: $property) {
+                ForEach(0 ..< 4) {
                     Text("\($0)")
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding()
-
-            Text(calculatePropertyA())
+            Button("test"){calculatePropertyWillFail()}
+            Text(calculateProperty())
                 .padding()
+            Text(calculatePropertyWillFail())
+                .padding()
+            Text(propertyB)
         }
     }
 }
