@@ -1,6 +1,8 @@
 # SwiftUI100Days
 Personal Notes for [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui)
 
+Started from September 5th, 2023
+
 ## Notes Content
 
 Code notes includ my solutions for each checkpoint. For some solutions I will add in some my own idea, but the main idea stay the same with the requirement and will still be able to demonstrate the same concept.
