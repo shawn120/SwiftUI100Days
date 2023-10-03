@@ -74,3 +74,6 @@ Project 4: [BetterRest](/BetterRest/BetterRest/ContentView.swift)
 - [x] Day26: Part 1: Extra Watching: [Create ML for Everyone](https://youtu.be/a905KIBw1hs)
 - [x] Day27: Part 2
 - [x] Day28: Part 3 (Challenge) (~~using `onChange` and `onAppear`~~) (use function with return or computed variable)
+
+Project 5: [WordScramble](/WordScramble/WordScramble/ContentView.swift)
+- [x] Day29: Part 1: [Work with Spell checking from UIKit](https://www.hackingwithswift.com/books/ios-swiftui/working-with-strings)
