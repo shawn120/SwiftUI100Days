@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
+    @State private var currScore = 0
     
     @State private var errorTitle = ""
     @State private var errorMessage = ""
@@ -41,12 +42,21 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                Button("New Word") {startGame()}
+            }
         }
+        Text("Current Score: \(currScore)")
+            .padding()
     }
     
     func addNewWord() {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         guard answer.count > 0 else {
+            return
+        }
+        guard isNotRoot(word: answer) else {
+            wordError(title: "\"\(answer)\" is the root word", message: "Use its letters, not repeat it")
             return
         }
         guard isOriginal(word: answer) else {
@@ -60,6 +70,11 @@ struct ContentView: View {
         guard isReal(word: answer) else {
             wordError(title: "\"\(answer)\" is not a word", message: "Check your spelling")
             return
+        }
+        
+        currScore+=1
+        if answer.count > rootWord.count/2 {
+            currScore+=1
         }
         
         withAnimation {
@@ -77,6 +92,8 @@ struct ContentView: View {
                 let allWords = startWords.components(separatedBy: "\n")
                 // 4. Pick one random word, or use "silkworm" as a sensible default
                 rootWord = allWords.randomElement() ?? "silkworm"
+                // empty used word
+                usedWords = [String]()
                 
                 // If we are here everything has worked, so we can exit
                 return
@@ -100,6 +117,10 @@ struct ContentView: View {
             }
         }
         return true
+    }
+    
+    func isNotRoot(word: String) -> Bool {
+        return word != rootWord
     }
     
     func isReal(word: String) -> Bool {
