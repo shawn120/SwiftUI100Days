@@ -78,4 +78,9 @@ Project 4: [BetterRest](/BetterRest/BetterRest/ContentView.swift)
 Project 5: [WordScramble](/WordScramble/WordScramble/ContentView.swift)
 - [x] Day29: Part 1: [Work with Spell checking from UIKit](https://www.hackingwithswift.com/books/ios-swiftui/working-with-strings)
 - [x] Day30: Part 2
-- [x] Day31: Part 3 (Challenge)  
+- [x] Day31: Part 3 (Challenge)
+
+Porject 6: [Animation (Technique)](/Animations/Animations/ContentView.swift)
+- [x] Day32: Part 1: Reading: [Simple Animations](https://www.hackingwithswift.com/100/swiftui/32)
+- [ ] Day33: Part 2: Reading: [Complex Animations]
+- [ ] Day34: Part 3 (Challenge)
