@@ -10,7 +10,7 @@ import Cocoa
 
 // Difference:
 // You can make one class build upon functionality in another class, gaining all its properties and methods as a starting point. If you want to selectively override some methods, you can do that too.
-// Because of that first point, Swift won’t automatically generate a memberwise (default) initializer for classes. This means you either need to write your own initializer, or assign default values to all your properties.
+// Because of that first point, Swift won’t automatically generate a memberwise (default) initializer for classes. This means you either need to write your own initializer, or assign default values to all your properties (in this way, the properties will stay the default value).
 // When you copy an instance of a class, both copies share the same data – if you change one copy, the other one also changes.
 // When the final copy of a class instance is destroyed, Swift can optionally run a special function called a deinitializer.
 // Even if you make a class constant, you can still change its properties as long as they are variables.
