@@ -17,6 +17,7 @@ struct buttonTextModifier: ViewModifier{
     }
 }
 
+// extend on View struct to make button text UI modifier easier to call, it is defined above
 extension View {
     func buttonText() -> some View {
         modifier(buttonTextModifier())
@@ -28,7 +29,7 @@ struct ContentView: View {
     // round count and round setting
     @State private var roundMax = 5
     @State private var round = 0
-    let roundRange = 3...10
+    private let roundRange = 3...10
     
     // cpu choice and game mode
     @State private var currentRPSIndex = Int.random(in: 0...2)
@@ -43,7 +44,7 @@ struct ContentView: View {
     // switchers
     @State private var scoreBoardShow = false
     @State private var randomMode = false
-    var gameStarted: Bool {
+    private var gameStarted: Bool {
         round > 0
     }
     
