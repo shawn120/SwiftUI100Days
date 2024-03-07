@@ -80,7 +80,11 @@ Project 5: [WordScramble](/WordScramble/WordScramble/ContentView.swift)
 - [x] Day30: Part 2
 - [x] Day31: Part 3 (Challenge)
 
-Porject 6: [Animation (Technique)](/Animations/Animations/ContentView.swift)
-- [x] Day32: Part 1: Reading: [Simple Animations](https://www.hackingwithswift.com/100/swiftui/32)
+Porject 6: Animation (Technique)
+- [x] Day32: Part 1: 
+  - [x] Reading: [Simple Animations](https://www.hackingwithswift.com/100/swiftui/32)
+  - [x] Code: [Implicit animations and customizing animations](/Animations/Animations/ContentView.swift)
+  - [x] Code: [Animating bindings](/Animations/Animations/ContentView2.swift)
+  - [x] Code: [Explicit animations](/Animations/Animations/ContentView3.swift)
 - [ ] Day33: Part 2: Reading: [Complex Animations]
 - [ ] Day34: Part 3 (Challenge)
