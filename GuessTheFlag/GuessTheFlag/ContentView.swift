@@ -23,7 +23,7 @@ extension View {
 
 struct ContentView: View {
     
-    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US", "China", "Taiwan", "Laos", "Philippines", "Japan", "Canada", "Malaysia", "Indonesia", "Vietnam", "Singapore", "USSR", "Korea", "North Korea", "Hong Kong"].shuffled()
+    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US", "Laos", "Philippines", "Japan", "Canada", "Malaysia", "Indonesia", "Vietnam", "Singapore", "Korea"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
     
     @State private var roundMax = 5
@@ -44,6 +44,11 @@ struct ContentView: View {
     @State private var round = 0
     @State private var resultTitle = ""
     @State private var resultMessage = ""
+    
+    @State private var rotateAmount = 0.0
+    @State private var opacityAmount = 1.0
+    @State private var scaleAmount = 1.0
+    @State private var tappedFlag = -1
     
     struct FlagImageView: View {
         var countryName: String
@@ -100,9 +105,20 @@ struct ContentView: View {
                     }
                     ForEach(0..<3) { number in
                         Button{
+                            withAnimation(.spring(duration: 1, bounce: 0.3)) {
+                                rotateAmount+=360
+                                opacityAmount-=0.9
+                                scaleAmount-=0.5
+                            }
                             flagTapped(number)
                         } label: {
                             FlagImageView(countries[number])
+                                .rotation3DEffect(
+                                    .degrees((tappedFlag == number) ? rotateAmount : 0),
+                                    axis: (x: 0, y: 1, z: 0)
+                                )
+                                .opacity((tappedFlag == number) ? 1.0 : opacityAmount)
+                                .scaleEffect((tappedFlag == number) ? 1.0 :scaleAmount)
                         }
                         
                     }
@@ -156,6 +172,7 @@ struct ContentView: View {
         }
         showingScore = true
         round += 1
+        tappedFlag = number
     }
     
     func finalRound() {
@@ -172,6 +189,12 @@ struct ContentView: View {
     
     func askQuestion() {
         let previousCountry = countries[correctAnswer]
+        tappedFlag = -1
+        withAnimation(.spring(duration: 1, bounce: 0.3)) {
+            rotateAmount = 0.0
+            opacityAmount = 1.0
+            scaleAmount = 1.0
+        }
         countries.shuffle()
         correctAnswer = nextCorrectAnswer(previousCountry: previousCountry, in: 0...2)
     }

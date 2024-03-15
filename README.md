@@ -87,10 +87,14 @@ Porject 6: Animation (Technique)
   - [x] Code: [Animating bindings](/Animations/Animations/ContentView2.swift)
   - [x] Code: [Explicit animations](/Animations/Animations/ContentView3.swift)
 - [x] Day33: Part 2:
-  - [x] Reading: [Complex Animations]
+  - [x] Reading: [Complex Animations](https://www.hackingwithswift.com/100/swiftui/33)
   - [x] Code: [Controlling the animation stack](/Animations/Animations/ContentView4.swift)
   - [x] Code: [Animating gestures](/Animations/Animations/ContentView5.swift)
   - [x] Code: [Gestures animation showing off](/Animations/Animations/HelloSwiftUIDragAnimation.swift)
   - [x] Code: [Showing and hiding views with transitions](/Animations/Animations/ContentView6.swift)
   - [x] Code: [Building custom transitions using ViewModifier](/Animations/Animations/ContentView7.swift)
-- [ ] Day34: Part 3 (Challenge)
+- [x] Day34: Part 3 (Challenge on [GuessTheFlag](/GuessTheFlag/GuessTheFlag/ContentView.swift))
+
+### Consolidation II (Day 35)
+
+Day35: Milestone:
