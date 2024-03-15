@@ -86,5 +86,11 @@ Porject 6: Animation (Technique)
   - [x] Code: [Implicit animations and customizing animations](/Animations/Animations/ContentView.swift)
   - [x] Code: [Animating bindings](/Animations/Animations/ContentView2.swift)
   - [x] Code: [Explicit animations](/Animations/Animations/ContentView3.swift)
-- [ ] Day33: Part 2: Reading: [Complex Animations]
+- [x] Day33: Part 2:
+  - [x] Reading: [Complex Animations]
+  - [x] Code: [Controlling the animation stack](/Animations/Animations/ContentView4.swift)
+  - [x] Code: [Animating gestures](/Animations/Animations/ContentView5.swift)
+  - [x] Code: [Gestures animation showing off](/Animations/Animations/HelloSwiftUIDragAnimation.swift)
+  - [x] Code: [Showing and hiding views with transitions](/Animations/Animations/ContentView6.swift)
+  - [x] Code: [Building custom transitions using ViewModifier](/Animations/Animations/ContentView7.swift)
 - [ ] Day34: Part 3 (Challenge)

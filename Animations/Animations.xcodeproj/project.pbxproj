@@ -13,6 +13,11 @@
 		29517B9F2AD251BE00443953 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29517B9E2AD251BE00443953 /* ContentView.swift */; };
 		29517BA12AD251BF00443953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29517BA02AD251BF00443953 /* Assets.xcassets */; };
 		29517BA42AD251BF00443953 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29517BA32AD251BF00443953 /* Preview Assets.xcassets */; };
+		295833C52BA4191100DA66FA /* ContentView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295833C42BA4191100DA66FA /* ContentView4.swift */; };
+		295833C72BA41BDE00DA66FA /* ContentView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295833C62BA41BDE00DA66FA /* ContentView5.swift */; };
+		295833C92BA41FBE00DA66FA /* HelloSwiftUIDragAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295833C82BA41FBE00DA66FA /* HelloSwiftUIDragAnimation.swift */; };
+		295833CB2BA4207F00DA66FA /* ContentView6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295833CA2BA4207F00DA66FA /* ContentView6.swift */; };
+		295833CD2BA4273600DA66FA /* ContentView7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295833CC2BA4273600DA66FA /* ContentView7.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		29517B9E2AD251BE00443953 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29517BA02AD251BF00443953 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29517BA32AD251BF00443953 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		295833C42BA4191100DA66FA /* ContentView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView4.swift; sourceTree = "<group>"; };
+		295833C62BA41BDE00DA66FA /* ContentView5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView5.swift; sourceTree = "<group>"; };
+		295833C82BA41FBE00DA66FA /* HelloSwiftUIDragAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloSwiftUIDragAnimation.swift; sourceTree = "<group>"; };
+		295833CA2BA4207F00DA66FA /* ContentView6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView6.swift; sourceTree = "<group>"; };
+		295833CC2BA4273600DA66FA /* ContentView7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView7.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,11 @@
 				29517B9E2AD251BE00443953 /* ContentView.swift */,
 				2940E4DA2B993A0E00B95316 /* ContentView2.swift */,
 				2940E4DC2B993CBD00B95316 /* ContentView3.swift */,
+				295833C42BA4191100DA66FA /* ContentView4.swift */,
+				295833C62BA41BDE00DA66FA /* ContentView5.swift */,
+				295833C82BA41FBE00DA66FA /* HelloSwiftUIDragAnimation.swift */,
+				295833CA2BA4207F00DA66FA /* ContentView6.swift */,
+				295833CC2BA4273600DA66FA /* ContentView7.swift */,
 				29517B9C2AD251BE00443953 /* AnimationsApp.swift */,
 				29517BA02AD251BF00443953 /* Assets.xcassets */,
 				29517BA22AD251BF00443953 /* Preview Content */,
@@ -143,9 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				295833C72BA41BDE00DA66FA /* ContentView5.swift in Sources */,
+				295833CB2BA4207F00DA66FA /* ContentView6.swift in Sources */,
+				295833C92BA41FBE00DA66FA /* HelloSwiftUIDragAnimation.swift in Sources */,
 				2940E4DB2B993A0E00B95316 /* ContentView2.swift in Sources */,
 				29517B9F2AD251BE00443953 /* ContentView.swift in Sources */,
 				2940E4DD2B993CBD00B95316 /* ContentView3.swift in Sources */,
+				295833CD2BA4273600DA66FA /* ContentView7.swift in Sources */,
+				295833C52BA4191100DA66FA /* ContentView4.swift in Sources */,
 				29517B9D2AD251BE00443953 /* AnimationsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
