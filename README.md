@@ -98,3 +98,4 @@ Porject 6: Animation (Technique)
 ### Consolidation II (Day 35)
 
 Day35: Milestone:
+- [x] Challenge: [FunMultiplication (functional but need to be better)](/FunMultiplication/FunMultiplication/ContentView.swift)
